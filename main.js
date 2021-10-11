@@ -1,8 +1,8 @@
 
 // età e km richiesti
 
-let UserKm = prompt("Quanti km vuoi percorrere ?")
-let UserAge = prompt("Qual è la tua età ?")
+let UserKm = parseInt(prompt("Quanti km vuoi percorrere ?"))
+let UserAge = parseInt(prompt("Qual è la tua età ?"))
 const ticketprice = 0.21 * UserKm
 const scontoU18 = 0.8
 const scontoO65 = 0.6
