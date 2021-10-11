@@ -17,6 +17,6 @@ if (UserAge < 18) {
     var finalticketprice = ticketprice.toFixed(2);
 }
 
-// visualizzazione sulla pagina del prezzo
+// visualizzazione del prezzo
 
 document.getElementById('price').innerHTML = 'Il costo del biglietto è di: € ' + finalticketprice;
