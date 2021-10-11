@@ -1,5 +1,22 @@
-const UsearName = prompt("Qual è il tuo nome ?")
-const UsearSur = prompt("Qual è il tuo cognome ?")
-const UsearColor = prompt("Qual è il tuo colore preferito ?")
-const psw = UsearName + UsearSur + UsearColor + '21';
-document.getElementById("password").innerHTML = psw;
+
+// età e km richiesti
+
+let UserKm = prompt("Quanti km vuoi percorrere ?")
+let UserAge = prompt("Qual è la tua età ?")
+const ticketprice = 0.21 * UserKm
+const scontoU18 = 0.8
+const scontoO65 = 0.6
+
+// calcolo sconto
+
+if (UserAge < 18) {
+    var finalticketprice = (ticketprice * scontoU18).toFixed(2);  
+} else if (UserAge > 65) {
+    var finalticketprice = (ticketprice * scontoO65).toFixed(2);
+} else {
+    var finalticketprice = ticketprice.toFixed(2);
+}
+
+// visualizzazione sulla pagina del prezzo
+
+document.getElementById('price').innerHTML = 'Il costo del biglietto è di: € ' + finalticketprice;
